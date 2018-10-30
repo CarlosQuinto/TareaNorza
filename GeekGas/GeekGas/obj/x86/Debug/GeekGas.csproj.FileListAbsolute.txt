@@ -1,0 +1,17 @@
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\bin\Debug\GeekGas.exe
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\bin\Debug\GeekGas.pdb
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\bin\Debug\BaseDatos.exe
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\bin\Debug\BaseDatos.pdb
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekGas.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekGas.BusquedaUsuarios.resources
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekGas.ElegirConsumo.resources
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekGas.Form1.resources
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekGas.Historial.resources
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekGas.Properties.Resources.resources
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekGas.RegistroUsuario.resources
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekGas.VistaAdmin.resources
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekGas.VistaUsuario.resources
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekGas.csproj.GenerateResource.Cache
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekGas.exe
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekGas.pdb
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\bin\Debug\GeekGas.exe.config

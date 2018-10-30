@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace BaseDatos
 {
@@ -50,10 +52,41 @@ namespace BaseDatos
             set { domicilio = value; }
         }
 
-        public Boolean Login(string cuenta, string contraseña) { 
-            
+        public Usuario Login(string user, string pass)
+        {
+            Usuario usuario = new Usuario();
+            SqlConnection conn = new SqlConnection(
+                ConfigurationManager
+                    .ConnectionStrings["conn"]
+                    .ConnectionString);
+            try
+            {
+                SqlCommand cmd = new SqlCommand("LOGIN_USER", conn);
 
-            return true;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@CUENTA", user);
+                cmd.Parameters.AddWithValue("@CONTRASENA", pass);
+
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlDataReader sdr = cmd.ExecuteReader();
+
+                while (sdr.Read())
+                {
+                    usuario.Cuenta = sdr["cuenta"].ToString();
+                    usuario.Nombre = sdr["nombre"].ToString();
+                    usuario.Contrasena = sdr["contrasena"].ToString();
+                    usuario.Rfc = sdr["rfc"].ToString();
+                    usuario.Domicilio = sdr["domicilio"].ToString();
+                    usuario.Id = Convert.ToInt32(sdr["id"].ToString());
+                }
+
+            }
+            catch (Exception e) { }
+
+            finally { conn.Close(); }
+
+            return usuario;
         }
+    
     }
 }
