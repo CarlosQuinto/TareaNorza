@@ -30,7 +30,7 @@
         {
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.txtCuenta = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,6 +46,7 @@
             this.btnIniciarSesion.TabIndex = 13;
             this.btnIniciarSesion.Text = "Iniciar Sesion";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // txtContrasena
             // 
@@ -54,12 +55,12 @@
             this.txtContrasena.Size = new System.Drawing.Size(207, 20);
             this.txtContrasena.TabIndex = 12;
             // 
-            // txtCorreo
+            // txtCuenta
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(128, 105);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(207, 20);
-            this.txtCorreo.TabIndex = 11;
+            this.txtCuenta.Location = new System.Drawing.Point(128, 105);
+            this.txtCuenta.Name = "txtCuenta";
+            this.txtCuenta.Size = new System.Drawing.Size(207, 20);
+            this.txtCuenta.TabIndex = 11;
             // 
             // label4
             // 
@@ -77,9 +78,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(28, 105);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 20);
+            this.label3.Size = new System.Drawing.Size(72, 20);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Correo:";
+            this.label3.Text = "Cuenta:";
             // 
             // label2
             // 
@@ -109,7 +110,7 @@
             this.ClientSize = new System.Drawing.Size(440, 326);
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.txtContrasena);
-            this.Controls.Add(this.txtCorreo);
+            this.Controls.Add(this.txtCuenta);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -125,7 +126,7 @@
 
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.TextBox txtContrasena;
-        private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.TextBox txtCuenta;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

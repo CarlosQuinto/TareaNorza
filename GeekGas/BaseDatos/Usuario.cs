@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BaseDatos
 {
-    class Usuario
+    public class Usuario
     {
         private int id;
 
@@ -48,6 +48,12 @@ namespace BaseDatos
         {
             get { return domicilio; }
             set { domicilio = value; }
+        }
+
+        public Boolean Login(string cuenta, string contraseña) { 
+            
+
+            return true;
         }
     }
 }
