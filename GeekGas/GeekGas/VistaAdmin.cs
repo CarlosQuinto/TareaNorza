@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace GeekGas
 {
-    public partial class Form1 : Form
+    public partial class VistaAdmin : Form
     {
-        public Form1()
+        public VistaAdmin()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
