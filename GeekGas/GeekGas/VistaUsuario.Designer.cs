@@ -144,6 +144,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "VistaUsuario";
             this.Text = "VistaUsuario";
+            this.Load += new System.EventHandler(this.VistaUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -88,5 +88,114 @@ namespace BaseDatos
             return usuario;
         }
     
+        public bool AgregarUsuario(Usuario u){
+
+            bool retorno = false;
+
+            SqlConnection conn = new SqlConnection(
+    ConfigurationManager
+        .ConnectionStrings["conn"]
+        .ConnectionString);
+            try
+            {
+                SqlCommand cmd = new SqlCommand("AGREGAR_USUARIO", conn);
+                conn.Open();
+                cmd.Parameters.AddWithValue("@CUENTA", u.Cuenta);
+                cmd.Parameters.AddWithValue("@NOMBRE", u.Nombre);
+                cmd.Parameters.AddWithValue("@RFC", u.Rfc);
+                cmd.Parameters.AddWithValue("@DOMICILIO", u.Domicilio);
+                cmd.Parameters.AddWithValue("@CONTRASENA", u.Contrasena);
+
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                int res = cmd.ExecuteNonQuery();
+
+                if (res == 1)
+                {
+                    retorno = true;
+                }
+
+            }
+            catch (Exception e) { }
+
+            finally { conn.Close(); }
+
+            return retorno;
+        }
+
+        public Usuario BuscarPorId(int id) {
+
+            Usuario u = new Usuario();
+
+            SqlConnection conn = new SqlConnection(
+    ConfigurationManager
+        .ConnectionStrings["conn"]
+        .ConnectionString);
+            try
+            {
+                SqlCommand cmd = new SqlCommand("BUSCAR_USUARIO_POR_ID", conn);
+                conn.Open();
+                cmd.Parameters.AddWithValue("@ID", id);
+
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlDataReader sdr = cmd.ExecuteReader();
+
+                while (sdr.Read())
+                {
+                    u.Cuenta = sdr["cuenta"].ToString();
+                    u.Nombre = sdr["nombre"].ToString();
+                    u.Contrasena = sdr["contrasena"].ToString();
+                    u.Rfc = sdr["rfc"].ToString();
+                    u.Domicilio = sdr["domicilio"].ToString();
+                    u.Id = Convert.ToInt32(sdr["id"].ToString());
+                }
+
+            }
+            catch (Exception e) { }
+
+            finally { conn.Close(); }
+
+            return u;
+        }
+
+        public List<Usuario> BuscarUsuarioPorNombre(string nombre) {
+
+            List<Usuario> cuentas = new List<Usuario>();
+
+            SqlConnection conn = new SqlConnection(
+                ConfigurationManager
+                    .ConnectionStrings["conn"]
+                    .ConnectionString);
+            try
+            {
+                SqlCommand cmd = new SqlCommand("BUSCAR_USUARIO_POR_NOMBRE", conn);
+                conn.Open();
+                cmd.Parameters.AddWithValue("@nombre", nombre);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                SqlDataReader sdr = cmd.ExecuteReader();
+
+                while (sdr.Read())
+                {
+                    Usuario cuenta = new Usuario();
+                    cuenta.Cuenta = sdr["cuenta"].ToString();
+                    cuenta.Nombre = sdr["nombre"].ToString();
+                    cuenta.Contrasena = sdr["contrasena"].ToString();
+                    cuenta.Rfc = sdr["rfc"].ToString();
+                    cuenta.Domicilio = sdr["domicilio"].ToString();
+                    cuenta.Id = Convert.ToInt32(sdr["id"].ToString());
+                    cuentas.Add(cuenta);
+                }
+            }
+            catch (Exception e) { }
+
+            finally { conn.Close(); }
+
+            return cuentas;
+
+
+        }
+
+
     }
 }
