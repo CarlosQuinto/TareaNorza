@@ -17,16 +17,16 @@ namespace BaseDatos
             get { return id; }
             set { id = value; }
         }
-        private decimal cantidad;
+        private double cantidad;
 
-        public decimal Cantidad
+        public double Cantidad
         {
             get { return cantidad; }
             set { cantidad = value; }
         }
-        private decimal costototal;
+        private double costototal;
 
-        public decimal Costototal
+        public double Costototal
         {
             get { return costototal; }
             set { costototal = value; }
@@ -103,10 +103,10 @@ namespace BaseDatos
                 {
                     Consumo consumodiario = new Consumo();
                     consumodiario.Fecha = Convert.ToDateTime(sdr["fecha"].ToString());
-                    consumodiario.Cantidad = Convert.ToDecimal(sdr["cantidad"].ToString());
+                    consumodiario.Cantidad = Convert.ToDouble(sdr["cantidad"].ToString());
                     consumodiario.IdUsuario = Convert.ToInt32(sdr["idUsuario"].ToString());
                     consumodiario.Id = Convert.ToInt32(sdr["id"].ToString());
-                    consumodiario.Costototal = Convert.ToDecimal(sdr["costototal"].ToString());
+                    consumodiario.Costototal = Convert.ToDouble(sdr["costototal"].ToString());
 
                     consumos.Add(consumodiario);
                 }
