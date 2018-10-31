@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaUsuario));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -39,11 +40,15 @@
             this.pt = new System.Windows.Forms.TableLayoutPanel();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(369, 75);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(367, 106);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(181, 35);
             this.button1.TabIndex = 1;
@@ -53,7 +58,8 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(31, 158);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(29, 189);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 35);
             this.button2.TabIndex = 2;
@@ -63,7 +69,8 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(182, 158);
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(180, 189);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(127, 35);
             this.button3.TabIndex = 3;
@@ -73,7 +80,8 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(31, 214);
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(29, 245);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(127, 35);
             this.button4.TabIndex = 4;
@@ -83,7 +91,8 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(182, 214);
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(180, 245);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(127, 35);
             this.button5.TabIndex = 5;
@@ -93,7 +102,8 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(369, 269);
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(367, 300);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(109, 35);
             this.button6.TabIndex = 6;
@@ -104,17 +114,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(221, 23);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(254, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 33);
+            this.label1.Size = new System.Drawing.Size(78, 25);
             this.label1.TabIndex = 9;
             this.label1.Text = "MENU";
             // 
             // lblBienvenido
             // 
             this.lblBienvenido.AutoSize = true;
-            this.lblBienvenido.Location = new System.Drawing.Point(28, 86);
+            this.lblBienvenido.Location = new System.Drawing.Point(26, 117);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(70, 13);
             this.lblBienvenido.TabIndex = 10;
@@ -129,7 +139,7 @@
             this.pt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.77852F));
             this.pt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.362416F));
             this.pt.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.pt.Location = new System.Drawing.Point(369, 128);
+            this.pt.Location = new System.Drawing.Point(367, 159);
             this.pt.Margin = new System.Windows.Forms.Padding(0);
             this.pt.Name = "pt";
             this.pt.RowCount = 1;
@@ -139,7 +149,8 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(484, 269);
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(482, 300);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(66, 35);
             this.button8.TabIndex = 27;
@@ -149,7 +160,8 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(23, 303);
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(29, 330);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 28;
@@ -157,16 +169,38 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.DarkOrange;
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.Location = new System.Drawing.Point(47, 9);
+            this.label2.MinimumSize = new System.Drawing.Size(100, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 70);
+            this.label2.TabIndex = 9;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(-1, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(578, 82);
+            this.panel1.TabIndex = 29;
+            // 
             // VistaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(576, 338);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(576, 375);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.pt);
             this.Controls.Add(this.lblBienvenido);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -176,6 +210,8 @@
             this.Name = "VistaUsuario";
             this.Text = "VistaUsuario";
             this.Load += new System.EventHandler(this.VistaUsuario_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +230,7 @@
         private System.Windows.Forms.TableLayoutPanel pt;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

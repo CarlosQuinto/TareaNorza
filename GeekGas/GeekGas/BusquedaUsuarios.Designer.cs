@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BusquedaUsuarios));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,7 +37,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -47,7 +51,7 @@
             this.NOMBRE,
             this.CUENTA,
             this.RFC});
-            this.dataGridView1.Location = new System.Drawing.Point(59, 170);
+            this.dataGridView1.Location = new System.Drawing.Point(61, 185);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -82,17 +86,20 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(247, 324);
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(242, 340);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(161, 39);
             this.button1.TabIndex = 1;
             this.button1.Text = "Seleccionar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(59, 112);
+            this.txtNombre.Location = new System.Drawing.Point(61, 127);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(510, 20);
             this.txtNombre.TabIndex = 2;
@@ -102,24 +109,47 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(54, 58);
+            this.label1.Location = new System.Drawing.Point(229, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(203, 29);
             this.label1.TabIndex = 3;
             this.label1.Text = "Buscar Usuarios";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.Location = new System.Drawing.Point(89, 9);
+            this.label2.MinimumSize = new System.Drawing.Size(100, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(100, 70);
+            this.label2.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkOrange;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(-4, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(628, 95);
+            this.panel1.TabIndex = 5;
+            // 
             // BusquedaUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 387);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(624, 400);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "BusquedaUsuarios";
             this.Text = "BusquedaUsuarios";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +165,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

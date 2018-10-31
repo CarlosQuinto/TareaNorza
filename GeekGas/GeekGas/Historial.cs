@@ -42,5 +42,10 @@ namespace GeekGas
                 dataGridView1.Rows.Add(cuenta.Id, cuenta.Fecha.ToString(),cuenta.Cantidad.ToString(), cuenta.Costototal.ToString());
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
