@@ -24,13 +24,38 @@ namespace GeekGas
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            Usuario u = new Usuario();
-            u.Nombre = txtNombre.Text;
-            u.Cuenta = txtCuenta.Text;
-            u.Contrasena = txtPassword.Text;
-            u.Domicilio = txtDomicilio.Text;
-            u.Rfc = txtRFC.Text;
-            u.AgregarUsuario(u);
+            if (txtNombre.Text.Equals("") ||
+                txtCuenta.Text.Equals("") ||
+                txtPassword.Text.Equals("") ||
+                txtDomicilio.Text.Equals("") ||
+                txtRFC.Text.Equals(""))
+            {
+                MessageBox.Show("Favor de no dejar campos vacios.", "Aviso",
+                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else {
+                if (MessageBox.Show("¿Desea concluir con la compra?", "Mensaje",
+MessageBoxButtons.YesNo, MessageBoxIcon.Question).ToString().Equals("Yes"))
+                {
+                    Usuario u = new Usuario();
+                    u.Nombre = txtNombre.Text;
+                    u.Cuenta = txtCuenta.Text;
+                    u.Contrasena = txtPassword.Text;
+                    u.Domicilio = txtDomicilio.Text;
+                    u.Rfc = txtRFC.Text;
+                    u.AgregarUsuario(u);
+                    limpiarCasillas();
+                }
+            }
+        }
+
+        public void limpiarCasillas(){
+
+            txtNombre.Text = "";
+            txtCuenta.Text = "";
+            txtPassword.Text = "";
+            txtDomicilio.Text = "";
+            txtRFC.Text = "";
         }
     }
 }

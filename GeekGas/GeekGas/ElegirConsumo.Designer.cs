@@ -54,7 +54,10 @@
             this.CANTIDAD,
             this.TOTAL});
             this.dataGridView1.Location = new System.Drawing.Point(12, 94);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(429, 139);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
@@ -87,6 +90,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = ">>";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -100,12 +104,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(79, 503);
+            this.button2.Location = new System.Drawing.Point(78, 449);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(283, 40);
             this.button2.TabIndex = 4;
             this.button2.Text = "Crear factura";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView2
             // 
@@ -116,7 +121,10 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.dataGridView2.Location = new System.Drawing.Point(12, 285);
+            this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(429, 139);
             this.dataGridView2.TabIndex = 5;
             // 
@@ -144,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 587);
+            this.ClientSize = new System.Drawing.Size(453, 501);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
@@ -152,6 +160,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "ElegirConsumo";
             this.Text = "ElegirConsumo";
+            this.Load += new System.EventHandler(this.ElegirConsumo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);

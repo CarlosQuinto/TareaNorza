@@ -15,3 +15,6 @@ C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekG
 C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekGas.exe
 C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekGas.pdb
 C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\bin\Debug\GeekGas.exe.config
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\Interop.EMFGENLib.dll
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\Interop.SAXSERIALIZELib.dll
+C:\Users\usuario\Documents\GitHub\TareaNorza\GeekGas\GeekGas\obj\x86\Debug\GeekGas.csproj.ResolveComReference.cache

@@ -38,13 +38,14 @@
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.pt = new System.Windows.Forms.TableLayoutPanel();
             this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(423, 75);
+            this.button1.Location = new System.Drawing.Point(369, 75);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 35);
+            this.button1.Size = new System.Drawing.Size(181, 35);
             this.button1.TabIndex = 1;
             this.button1.Text = "Historial";
             this.button1.UseVisualStyleBackColor = true;
@@ -142,15 +143,26 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(66, 35);
             this.button8.TabIndex = 27;
-            this.button8.Text = "Cancelar";
+            this.button8.Text = "Limpiar ";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(23, 303);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 28;
+            this.button7.Text = "Salir";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // VistaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 338);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.pt);
             this.Controls.Add(this.lblBienvenido);
@@ -181,5 +193,6 @@
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.TableLayoutPanel pt;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
     }
 }

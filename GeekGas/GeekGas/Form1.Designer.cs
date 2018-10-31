@@ -52,8 +52,10 @@
             // 
             this.txtContrasena.Location = new System.Drawing.Point(128, 173);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(207, 20);
             this.txtContrasena.TabIndex = 12;
+            this.txtContrasena.Text = "123456";
             // 
             // txtCuenta
             // 
@@ -61,6 +63,7 @@
             this.txtCuenta.Name = "txtCuenta";
             this.txtCuenta.Size = new System.Drawing.Size(207, 20);
             this.txtCuenta.TabIndex = 11;
+            this.txtCuenta.Text = "admin";
             // 
             // label4
             // 

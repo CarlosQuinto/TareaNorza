@@ -80,35 +80,64 @@ namespace GeekGas
 
         private void button8_Click(object sender, EventArgs e)
         {
-            pt.Controls.Clear();
+            if (pt.Controls.Count > 0)
+            {
+                if (MessageBox.Show("¿Esta seguro que desea limpiar el carrito?", "Mensaje",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question).ToString().Equals("Yes"))
+                {
+                    pt.Controls.Clear();
+                }
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (pt.Controls.Count < 0)
-            {
 
-            }
-            else
-            {
-                Consumo c = new Consumo();
-                c.Cantidad = cantidad;
-                c.Costototal = costo;
-                c.Fecha = DateTime.Now;
-                c.IdUsuario = u.Id;
-                c.CrearTicket(c);
-                cantidad = 0;
-                costo = 0;
-                pt.Controls.Clear();
-            }
+                 if (pt.Controls.Count <= 0)
+                    {
+                        MessageBox.Show("Debe seleccionar al menos un producto.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        if (MessageBox.Show("¿Desea concluir con la compra?", "Mensaje",
+   MessageBoxButtons.YesNo, MessageBoxIcon.Question).ToString().Equals("Yes"))
+                        {
+                            Consumo c = new Consumo();
+                            c.Cantidad = cantidad;
+                            c.Costototal = costo;
+                            c.Fecha = DateTime.Now;
+                            c.IdUsuario = u.Id;
+                            c.CrearTicket(c);
+                            cantidad = 0;
+                            costo = 0;
+                            pt.Controls.Clear();
+                        }
+                     }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Consumo c = new Consumo();
             List<Consumo> consumos = c.ConsumoCuenta(u.Id);
-            Historial h = new Historial(consumos);
-            h.ShowDialog();
+            if (consumos.Count <= 0)
+            {
+                MessageBox.Show("No cuenta con ningun registro en su historial de compras.", "Aviso",
+                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                Historial h = new Historial(consumos);
+                h.ShowDialog();
+            }
+            }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            this.Hide();
         }
 
     }

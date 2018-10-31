@@ -19,29 +19,41 @@ namespace GeekGas
             InitializeComponent();
         }
 
-       
+
 
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            if (txtCuenta.Text.Equals("admin") && txtContrasena.Text.Equals("123456"))
+            if (txtCuenta.Text.Equals("") || txtContrasena.Text.Equals(""))
             {
-                VistaAdmin va = new VistaAdmin();
-                va.Show();
-                this.Hide();
+                MessageBox.Show("Favor de no dejar campos vacios.", "Aviso",
+                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else 
-            { 
-                if (u.Login(txtCuenta.Text, txtContrasena.Text).Id > 0) 
+            else
+            {
+
+                if (txtCuenta.Text.Equals("admin") && txtContrasena.Text.Equals("123456"))
                 {
-                    VistaUsuario vu = new VistaUsuario(u.Login(txtCuenta.Text, txtContrasena.Text));
-                    vu.Show();
+                    VistaAdmin va = new VistaAdmin();
+                    va.Show();
                     this.Hide();
-                
                 }
+                else
+                {
+                    if (u.Login(txtCuenta.Text, txtContrasena.Text).Id > 0)
+                    {
+                        VistaUsuario vu = new VistaUsuario(u.Login(txtCuenta.Text, txtContrasena.Text));
+                        vu.Show();
+                        this.Hide();
+
+                    }
+                    else {
+                        MessageBox.Show("Cuenta y/o contraseña incorrectas.", "Aviso",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+
             }
-
         }
-
         
     }
 }
