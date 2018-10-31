@@ -22,12 +22,8 @@ namespace GeekGas
         {
             this.u = u;
             InitializeComponent();
+            lblBienvenido.Text = "Bienvenido " + u.Nombre;
         }
 
-
-        private void VistaUsuario_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

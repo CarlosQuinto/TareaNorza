@@ -33,7 +33,7 @@ namespace GeekGas
             { 
                 if (u.Login(txtCuenta.Text, txtContrasena.Text).Id > 0) 
                 {
-                    VistaUsuario vu = new VistaUsuario();
+                    VistaUsuario vu = new VistaUsuario(u.Login(txtCuenta.Text, txtContrasena.Text));
                     vu.Show();
                     this.Hide();
                 
