@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BusquedaUsuarios));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,7 +36,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -115,21 +113,10 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Buscar Usuarios";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
-            this.label2.Location = new System.Drawing.Point(89, 9);
-            this.label2.MinimumSize = new System.Drawing.Size(100, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 70);
-            this.label2.TabIndex = 4;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkOrange;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(-4, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(628, 95);
@@ -165,7 +152,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
     }
 }
