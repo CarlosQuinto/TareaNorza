@@ -7,7 +7,7 @@ using System.Configuration;
 
 namespace BaseDatos
 {
-    class Consumo
+   public class Consumo
     {
 
         private int id;

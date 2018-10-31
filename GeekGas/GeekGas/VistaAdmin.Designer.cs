@@ -32,6 +32,7 @@
             this.btnRegistro = new System.Windows.Forms.Button();
             this.btnGenerarFacturas = new System.Windows.Forms.Button();
             this.btnReporteTotalAnual = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -53,6 +54,7 @@
             this.btnRegistro.TabIndex = 1;
             this.btnRegistro.Text = "Registrar Usuarios";
             this.btnRegistro.UseVisualStyleBackColor = true;
+            this.btnRegistro.Click += new System.EventHandler(this.btnRegistro_Click);
             // 
             // btnGenerarFacturas
             // 
@@ -63,6 +65,7 @@
             this.btnGenerarFacturas.TabIndex = 2;
             this.btnGenerarFacturas.Text = "Generar Facturas";
             this.btnGenerarFacturas.UseVisualStyleBackColor = true;
+            this.btnGenerarFacturas.Click += new System.EventHandler(this.btnGenerarFacturas_Click);
             // 
             // btnReporteTotalAnual
             // 
@@ -74,11 +77,22 @@
             this.btnReporteTotalAnual.Text = "Reporte Total Anual";
             this.btnReporteTotalAnual.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(424, 271);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 22);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // VistaAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 305);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnReporteTotalAnual);
             this.Controls.Add(this.btnGenerarFacturas);
             this.Controls.Add(this.btnRegistro);
@@ -96,5 +110,6 @@
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.Button btnGenerarFacturas;
         private System.Windows.Forms.Button btnReporteTotalAnual;
+        private System.Windows.Forms.Button button1;
     }
 }

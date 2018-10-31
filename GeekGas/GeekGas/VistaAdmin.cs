@@ -15,5 +15,24 @@ namespace GeekGas
         {
             InitializeComponent();
         }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            RegistroUsuario ru = new RegistroUsuario();
+            ru.ShowDialog();
+        }
+
+        private void btnGenerarFacturas_Click(object sender, EventArgs e)
+        {
+            BusquedaUsuarios bu = new BusquedaUsuarios();
+            bu.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.Show();
+            this.Hide();
+        }
     }
 }

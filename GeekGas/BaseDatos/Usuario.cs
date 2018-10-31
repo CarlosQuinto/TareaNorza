@@ -104,7 +104,7 @@ namespace BaseDatos
                 cmd.Parameters.AddWithValue("@NOMBRE", u.Nombre);
                 cmd.Parameters.AddWithValue("@RFC", u.Rfc);
                 cmd.Parameters.AddWithValue("@DOMICILIO", u.Domicilio);
-                cmd.Parameters.AddWithValue("@CONTRASENA", u.Contrasena);
+                cmd.Parameters.AddWithValue("@CONTRA", u.Contrasena);
 
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
@@ -194,6 +194,41 @@ namespace BaseDatos
             return cuentas;
 
 
+        }
+
+        public List<Usuario> ObtenerUsuario()
+        {
+            List<Usuario> cuentas = new List<Usuario>();
+
+            SqlConnection conn = new SqlConnection(
+                ConfigurationManager
+                    .ConnectionStrings["conn"]
+                    .ConnectionString);
+            try
+            {
+                SqlCommand cmd = new SqlCommand("OBTENER_USUARIO", conn);
+                conn.Open();
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                SqlDataReader sdr = cmd.ExecuteReader();
+
+                while (sdr.Read())
+                {
+                    Usuario cuenta = new Usuario();
+                    cuenta.Cuenta = sdr["cuenta"].ToString();
+                    cuenta.Nombre = sdr["nombre"].ToString();
+                    cuenta.Contrasena = sdr["contrasena"].ToString();
+                    cuenta.Rfc = sdr["rfc"].ToString();
+                    cuenta.Domicilio = sdr["domicilio"].ToString();
+                    cuenta.Id = Convert.ToInt32(sdr["id"].ToString());
+                    cuentas.Add(cuenta);
+                }
+            }
+            catch (Exception e) { }
+
+            finally { conn.Close(); }
+
+            return cuentas;
         }
 
 
