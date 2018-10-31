@@ -34,8 +34,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.pt = new System.Windows.Forms.TableLayoutPanel();
@@ -44,16 +42,17 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(423, 43);
+            this.button1.Location = new System.Drawing.Point(423, 75);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 35);
             this.button1.TabIndex = 1;
             this.button1.Text = "Historial";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(24, 128);
+            this.button2.Location = new System.Drawing.Point(31, 158);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 35);
             this.button2.TabIndex = 2;
@@ -63,7 +62,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(175, 128);
+            this.button3.Location = new System.Drawing.Point(182, 158);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(127, 35);
             this.button3.TabIndex = 3;
@@ -73,7 +72,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(24, 184);
+            this.button4.Location = new System.Drawing.Point(31, 214);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(127, 35);
             this.button4.TabIndex = 4;
@@ -83,7 +82,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(175, 184);
+            this.button5.Location = new System.Drawing.Point(182, 214);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(127, 35);
             this.button5.TabIndex = 5;
@@ -101,22 +100,6 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(175, 238);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(127, 35);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "AGREGAR";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(31, 246);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(120, 20);
-            this.textBox1.TabIndex = 8;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -130,7 +113,7 @@
             // lblBienvenido
             // 
             this.lblBienvenido.AutoSize = true;
-            this.lblBienvenido.Location = new System.Drawing.Point(28, 65);
+            this.lblBienvenido.Location = new System.Drawing.Point(28, 86);
             this.lblBienvenido.Name = "lblBienvenido";
             this.lblBienvenido.Size = new System.Drawing.Size(70, 13);
             this.lblBienvenido.TabIndex = 10;
@@ -172,8 +155,6 @@
             this.Controls.Add(this.pt);
             this.Controls.Add(this.lblBienvenido);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -196,8 +177,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.TableLayoutPanel pt;

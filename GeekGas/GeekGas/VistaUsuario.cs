@@ -103,5 +103,13 @@ namespace GeekGas
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Consumo c = new Consumo();
+            List<Consumo> consumos = c.ConsumoCuenta(u.Id);
+            Historial h = new Historial(consumos);
+            h.ShowDialog();
+        }
+
     }
 }
