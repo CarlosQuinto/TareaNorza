@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BaseDatos;
+using GeekGas.Reportes;
 
 namespace GeekGas
 {
@@ -87,7 +88,15 @@ namespace GeekGas
 
         private void button2_Click(object sender, EventArgs e)
         {
+            FacturaForm t = new FacturaForm();
+           // t.Costo = costo;
+            //t.Cantidad = cantidad;
+            //t.Nombre = u.Nombre;
+            //t.Fecha =
+            //t.Id =
+            //t.Rfc = u.Rfc;
 
+            t.ShowDialog();
         }
 
 

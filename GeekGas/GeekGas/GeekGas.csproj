@@ -11,7 +11,8 @@
     <RootNamespace>GeekGas</RootNamespace>
     <AssemblyName>GeekGas</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -37,9 +38,15 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -93,6 +100,18 @@
       <DependentUpon>Factura.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reportes\FacturaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FacturaForm.Designer.cs">
+      <DependentUpon>FacturaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteGlobalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Form1.Designer.cs">
+      <DependentUpon>ReporteGlobalForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\ReporteGlobal.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -104,6 +123,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Ticket.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\TicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\TicketForm.Designer.cs">
+      <DependentUpon>TicketForm.cs</DependentUpon>
     </Compile>
     <Compile Include="VistaAdmin.cs">
       <SubType>Form</SubType>
@@ -141,6 +166,12 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Factura.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FacturaForm.resx">
+      <DependentUpon>FacturaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Form1.resx">
+      <DependentUpon>ReporteGlobalForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\ReporteGlobal.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteGlobal.cs</LastGenOutput>
@@ -148,6 +179,9 @@
     <EmbeddedResource Include="Reportes\Ticket.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Ticket.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\TicketForm.resx">
+      <DependentUpon>TicketForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VistaAdmin.resx">
       <DependentUpon>VistaAdmin.cs</DependentUpon>

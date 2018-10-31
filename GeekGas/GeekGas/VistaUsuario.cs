@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BaseDatos;
+using GeekGas.Reportes;
 
 namespace GeekGas
 {
@@ -104,11 +105,17 @@ namespace GeekGas
    MessageBoxButtons.YesNo, MessageBoxIcon.Question).ToString().Equals("Yes"))
                         {
                             Consumo c = new Consumo();
+                            TicketForm t = new TicketForm();
+                            t.Costo = costo;
+                            t.Cantidad = cantidad;
+                            t.Nombre = u.Nombre;
+                            t.ShowDialog();
                             c.Cantidad = cantidad;
                             c.Costototal = costo;
                             c.Fecha = DateTime.Now;
                             c.IdUsuario = u.Id;
                             c.CrearTicket(c);
+                            
                             cantidad = 0;
                             costo = 0;
                             pt.Controls.Clear();
